@@ -14,6 +14,7 @@
 		8FF9EC8D2E331BCA005A118D /* GameExplorerRemasteredTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9EC8C2E331BCA005A118D /* GameExplorerRemasteredTests.swift */; };
 		8FF9EC972E331BCA005A118D /* GameExplorerRemasteredUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9EC962E331BCA005A118D /* GameExplorerRemasteredUITests.swift */; };
 		8FF9EC992E331BCA005A118D /* GameExplorerRemasteredUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9EC982E331BCA005A118D /* GameExplorerRemasteredUITestsLaunchTests.swift */; };
+		8FF9ECAA2E34A02D005A118D /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9ECA92E34A02D005A118D /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		8FF9EC922E331BCA005A118D /* GameExplorerRemasteredUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameExplorerRemasteredUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF9EC962E331BCA005A118D /* GameExplorerRemasteredUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameExplorerRemasteredUITests.swift; sourceTree = "<group>"; };
 		8FF9EC982E331BCA005A118D /* GameExplorerRemasteredUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameExplorerRemasteredUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8FF9ECA92E34A02D005A118D /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,9 @@
 		8FF9EC7A2E331BC8005A118D /* GameExplorerRemastered */ = {
 			isa = PBXGroup;
 			children = (
-				8FF9EC7B2E331BC8005A118D /* GameExplorerRemasteredApp.swift */,
-				8FF9EC7D2E331BC8005A118D /* ContentView.swift */,
+				8FF9ECA72E335F47005A118D /* services */,
+				8FF9ECA62E335F3A005A118D /* resourse */,
+				8FF9ECA52E335F2A005A118D /* features */,
 				8FF9EC7F2E331BCA005A118D /* Assets.xcassets */,
 				8FF9EC812E331BCA005A118D /* Preview Content */,
 			);
@@ -125,6 +128,38 @@
 				8FF9EC982E331BCA005A118D /* GameExplorerRemasteredUITestsLaunchTests.swift */,
 			);
 			path = GameExplorerRemasteredUITests;
+			sourceTree = "<group>";
+		};
+		8FF9ECA52E335F2A005A118D /* features */ = {
+			isa = PBXGroup;
+			children = (
+				8FF9ECA82E349FD3005A118D /* core */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		8FF9ECA62E335F3A005A118D /* resourse */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = resourse;
+			sourceTree = "<group>";
+		};
+		8FF9ECA72E335F47005A118D /* services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		8FF9ECA82E349FD3005A118D /* core */ = {
+			isa = PBXGroup;
+			children = (
+				8FF9ECA92E34A02D005A118D /* MenuView.swift */,
+				8FF9EC7B2E331BC8005A118D /* GameExplorerRemasteredApp.swift */,
+				8FF9EC7D2E331BC8005A118D /* ContentView.swift */,
+			);
+			path = core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FF9EC7E2E331BC8005A118D /* ContentView.swift in Sources */,
+				8FF9ECAA2E34A02D005A118D /* MenuView.swift in Sources */,
 				8FF9EC7C2E331BC8005A118D /* GameExplorerRemasteredApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
