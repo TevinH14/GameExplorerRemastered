@@ -15,6 +15,9 @@
 		8FF9EC972E331BCA005A118D /* GameExplorerRemasteredUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9EC962E331BCA005A118D /* GameExplorerRemasteredUITests.swift */; };
 		8FF9EC992E331BCA005A118D /* GameExplorerRemasteredUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9EC982E331BCA005A118D /* GameExplorerRemasteredUITestsLaunchTests.swift */; };
 		8FF9ECAA2E34A02D005A118D /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9ECA92E34A02D005A118D /* MenuView.swift */; };
+		8FF9ECB02E37DC1C005A118D /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9ECAF2E37DC1C005A118D /* Games.swift */; };
+		8FF9ECB32E37DF6C005A118D /* RAWGAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9ECB22E37DF6C005A118D /* RAWGAPI.swift */; };
+		8FF9ECB62E37EAF3005A118D /* RAWGAPI+EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9ECB52E37EAF3005A118D /* RAWGAPI+EndPoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,10 @@
 		8FF9EC962E331BCA005A118D /* GameExplorerRemasteredUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameExplorerRemasteredUITests.swift; sourceTree = "<group>"; };
 		8FF9EC982E331BCA005A118D /* GameExplorerRemasteredUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameExplorerRemasteredUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8FF9ECA92E34A02D005A118D /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		8FF9ECAF2E37DC1C005A118D /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		8FF9ECB22E37DF6C005A118D /* RAWGAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAWGAPI.swift; sourceTree = "<group>"; };
+		8FF9ECB42E37E81C005A118D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8FF9ECB52E37EAF3005A118D /* RAWGAPI+EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RAWGAPI+EndPoints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +103,10 @@
 		8FF9EC7A2E331BC8005A118D /* GameExplorerRemastered */ = {
 			isa = PBXGroup;
 			children = (
-				8FF9ECA72E335F47005A118D /* services */,
-				8FF9ECA62E335F3A005A118D /* resourse */,
-				8FF9ECA52E335F2A005A118D /* features */,
+				8FF9ECB42E37E81C005A118D /* Info.plist */,
+				8FF9ECA72E335F47005A118D /* Services */,
+				8FF9ECA62E335F3A005A118D /* Resourses */,
+				8FF9ECA52E335F2A005A118D /* Features */,
 				8FF9EC7F2E331BCA005A118D /* Assets.xcassets */,
 				8FF9EC812E331BCA005A118D /* Preview Content */,
 			);
@@ -130,36 +138,79 @@
 			path = GameExplorerRemasteredUITests;
 			sourceTree = "<group>";
 		};
-		8FF9ECA52E335F2A005A118D /* features */ = {
+		8FF9ECA52E335F2A005A118D /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				8FF9ECA82E349FD3005A118D /* core */,
+				8FF9ECAB2E37DBD1005A118D /* Games */,
+				8FF9ECA82E349FD3005A118D /* Core */,
 			);
-			path = features;
+			path = Features;
 			sourceTree = "<group>";
 		};
-		8FF9ECA62E335F3A005A118D /* resourse */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = resourse;
-			sourceTree = "<group>";
-		};
-		8FF9ECA72E335F47005A118D /* services */ = {
+		8FF9ECA62E335F3A005A118D /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = services;
+			path = Resourses;
 			sourceTree = "<group>";
 		};
-		8FF9ECA82E349FD3005A118D /* core */ = {
+		8FF9ECA72E335F47005A118D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8FF9ECB12E37DF2D005A118D /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8FF9ECA82E349FD3005A118D /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				8FF9ECA92E34A02D005A118D /* MenuView.swift */,
 				8FF9EC7B2E331BC8005A118D /* GameExplorerRemasteredApp.swift */,
 				8FF9EC7D2E331BC8005A118D /* ContentView.swift */,
 			);
-			path = core;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8FF9ECAB2E37DBD1005A118D /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				8FF9ECAE2E37DC01005A118D /* ViewModel */,
+				8FF9ECAD2E37DBEA005A118D /* Model */,
+				8FF9ECAC2E37DBDE005A118D /* V'iews */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		8FF9ECAC2E37DBDE005A118D /* V'iews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "V'iews";
+			sourceTree = "<group>";
+		};
+		8FF9ECAD2E37DBEA005A118D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8FF9ECAF2E37DC1C005A118D /* Games.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8FF9ECAE2E37DC01005A118D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8FF9ECB12E37DF2D005A118D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8FF9ECB22E37DF6C005A118D /* RAWGAPI.swift */,
+				8FF9ECB52E37EAF3005A118D /* RAWGAPI+EndPoints.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +346,9 @@
 				8FF9EC7E2E331BC8005A118D /* ContentView.swift in Sources */,
 				8FF9ECAA2E34A02D005A118D /* MenuView.swift in Sources */,
 				8FF9EC7C2E331BC8005A118D /* GameExplorerRemasteredApp.swift in Sources */,
+				8FF9ECB62E37EAF3005A118D /* RAWGAPI+EndPoints.swift in Sources */,
+				8FF9ECB32E37DF6C005A118D /* RAWGAPI.swift in Sources */,
+				8FF9ECB02E37DC1C005A118D /* Games.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +515,7 @@
 				DEVELOPMENT_TEAM = TL64PXWQWA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GameExplorerRemastered/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -490,6 +545,7 @@
 				DEVELOPMENT_TEAM = TL64PXWQWA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GameExplorerRemastered/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
