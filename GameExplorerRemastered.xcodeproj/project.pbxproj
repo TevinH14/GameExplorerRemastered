@@ -18,7 +18,7 @@
 		8FF9ECB02E37DC1C005A118D /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9ECAF2E37DC1C005A118D /* Games.swift */; };
 		8FF9ECB32E37DF6C005A118D /* RAWGAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9ECB22E37DF6C005A118D /* RAWGAPI.swift */; };
 		8FF9ECB62E37EAF3005A118D /* RAWGAPI+EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9ECB52E37EAF3005A118D /* RAWGAPI+EndPoints.swift */; };
-		8FF9ECBF2E3841F9005A118D /* Secrets.xcconfig.local in Resources */ = {isa = PBXBuildFile; fileRef = 8FF9ECBE2E3841F9005A118D /* Secrets.xcconfig.local */; };
+		8FF9ECC32E385612005A118D /* ConfidentialKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8FF9ECC22E385612005A118D /* ConfidentialKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +54,6 @@
 		8FF9ECB22E37DF6C005A118D /* RAWGAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAWGAPI.swift; sourceTree = "<group>"; };
 		8FF9ECB42E37E81C005A118D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8FF9ECB52E37EAF3005A118D /* RAWGAPI+EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RAWGAPI+EndPoints.swift"; sourceTree = "<group>"; };
-		8FF9ECBE2E3841F9005A118D /* Secrets.xcconfig.local */ = {isa = PBXFileReference; lastKnownFileType = text; path = Secrets.xcconfig.local; sourceTree = "<group>"; };
-		8FF9ECC02E3844CC005A118D /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FF9ECC32E385612005A118D /* ConfidentialKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,8 +219,6 @@
 		8FF9ECBD2E3841A4005A118D /* config */ = {
 			isa = PBXGroup;
 			children = (
-				8FF9ECBE2E3841F9005A118D /* Secrets.xcconfig.local */,
-				8FF9ECC02E3844CC005A118D /* Secrets.xcconfig */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -242,6 +239,9 @@
 			dependencies = (
 			);
 			name = GameExplorerRemastered;
+			packageProductDependencies = (
+				8FF9ECC22E385612005A118D /* ConfidentialKit */,
+			);
 			productName = GameExplorerRemastered;
 			productReference = 8FF9EC782E331BC8005A118D /* GameExplorerRemastered.app */;
 			productType = "com.apple.product-type.application";
@@ -314,6 +314,9 @@
 				Base,
 			);
 			mainGroup = 8FF9EC6F2E331BC8005A118D;
+			packageReferences = (
+				8FF9ECC12E385612005A118D /* XCRemoteSwiftPackageReference "swift-confidential" */,
+			);
 			productRefGroup = 8FF9EC792E331BC8005A118D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -332,7 +335,6 @@
 			files = (
 				8FF9EC832E331BCA005A118D /* Preview Assets.xcassets in Resources */,
 				8FF9EC802E331BCA005A118D /* Assets.xcassets in Resources */,
-				8FF9ECBF2E3841F9005A118D /* Secrets.xcconfig.local in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +403,6 @@
 /* Begin XCBuildConfiguration section */
 		8FF9EC9A2E331BCA005A118D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FF9ECC02E3844CC005A118D /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -695,6 +696,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8FF9ECC12E385612005A118D /* XCRemoteSwiftPackageReference "swift-confidential" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/securevale/swift-confidential";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8FF9ECC22E385612005A118D /* ConfidentialKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FF9ECC12E385612005A118D /* XCRemoteSwiftPackageReference "swift-confidential" */;
+			productName = ConfidentialKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8FF9EC702E331BC8005A118D /* Project object */;
 }
