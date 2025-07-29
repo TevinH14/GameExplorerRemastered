@@ -18,6 +18,7 @@
 		8FF9ECB02E37DC1C005A118D /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9ECAF2E37DC1C005A118D /* Games.swift */; };
 		8FF9ECB32E37DF6C005A118D /* RAWGAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9ECB22E37DF6C005A118D /* RAWGAPI.swift */; };
 		8FF9ECB62E37EAF3005A118D /* RAWGAPI+EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9ECB52E37EAF3005A118D /* RAWGAPI+EndPoints.swift */; };
+		8FF9ECBF2E3841F9005A118D /* Secrets.xcconfig.local in Resources */ = {isa = PBXBuildFile; fileRef = 8FF9ECBE2E3841F9005A118D /* Secrets.xcconfig.local */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		8FF9ECB22E37DF6C005A118D /* RAWGAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAWGAPI.swift; sourceTree = "<group>"; };
 		8FF9ECB42E37E81C005A118D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8FF9ECB52E37EAF3005A118D /* RAWGAPI+EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RAWGAPI+EndPoints.swift"; sourceTree = "<group>"; };
+		8FF9ECBE2E3841F9005A118D /* Secrets.xcconfig.local */ = {isa = PBXFileReference; lastKnownFileType = text; path = Secrets.xcconfig.local; sourceTree = "<group>"; };
+		8FF9ECC02E3844CC005A118D /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 		8FF9EC7A2E331BC8005A118D /* GameExplorerRemastered */ = {
 			isa = PBXGroup;
 			children = (
+				8FF9ECBD2E3841A4005A118D /* config */,
 				8FF9ECB42E37E81C005A118D /* Info.plist */,
 				8FF9ECA72E335F47005A118D /* Services */,
 				8FF9ECA62E335F3A005A118D /* Resourses */,
@@ -213,6 +217,15 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		8FF9ECBD2E3841A4005A118D /* config */ = {
+			isa = PBXGroup;
+			children = (
+				8FF9ECBE2E3841F9005A118D /* Secrets.xcconfig.local */,
+				8FF9ECC02E3844CC005A118D /* Secrets.xcconfig */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -319,6 +332,7 @@
 			files = (
 				8FF9EC832E331BCA005A118D /* Preview Assets.xcassets in Resources */,
 				8FF9EC802E331BCA005A118D /* Assets.xcassets in Resources */,
+				8FF9ECBF2E3841F9005A118D /* Secrets.xcconfig.local in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +401,7 @@
 /* Begin XCBuildConfiguration section */
 		8FF9EC9A2E331BCA005A118D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FF9ECC02E3844CC005A118D /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
