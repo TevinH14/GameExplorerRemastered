@@ -10,7 +10,7 @@ import Foundation
 struct RAWGAPI {
     //MARK: Api Key
     //Get api Key from info.plist
-    static let apiKey: String = Bundle.main.infoDictionary?["RAWG_API_KEY"] as? String ?? ""
+    static let apiKey: String = ""
     //MARK: Base url
     // Base api
     static let base_Url: String = "https://api.rawg.io/api/"
