@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 struct RAWGAPI {
     //MARK: Api Key
     //Get api Key from info.plist
