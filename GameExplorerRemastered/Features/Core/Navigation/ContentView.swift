@@ -12,15 +12,13 @@ struct ContentView: View {
     @State private var selectedMenu: MenuItem = .home // Track the selected menu item
 
     var body: some View {
-        ZStack {
+        ZStack(alignment: .leading) {
             // Main content changes based on selection
             NavigationView {
                 VStack {
                     switch selectedMenu {
                     case .home:
-                        Text("Home Screen")
-                            .font(.largeTitle)
-                            .padding()
+                        HomeView(viewModel: HomeViewModel(repository: GameRepository()))
                     case .games:
                         Text("Games Screen")
                             .font(.largeTitle)
@@ -76,8 +74,10 @@ struct ContentView: View {
                     }
 
                 MenuView(selectedMenu: $selectedMenu, isMenuOpen: $isMenuOpen)
-                    .frame(width: 250)
+                    .frame(maxWidth: 250, maxHeight: UIScreen.screenHeight)
                     .transition(.move(edge: .leading))
+                    .ignoresSafeArea()
+                    .animation(.easeInOut, value: isMenuOpen)
                     .zIndex(1)
             }
         }
