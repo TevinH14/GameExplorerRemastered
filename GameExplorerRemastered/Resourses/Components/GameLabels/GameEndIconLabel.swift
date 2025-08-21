@@ -12,11 +12,14 @@ struct GameEndIconLabel: View {
     let title: String
     let font: GameFont
     let endIcon: String
+    let alignment: Alignment
+    var width: CGFloat?
+
     
     var body: some View {
         ZStack {
             HStack {
-                HStack {
+                HStack() {
                     GameText(text: title, font: font)
                     Image(systemName: endIcon)
                         .font(.title)
@@ -25,9 +28,10 @@ struct GameEndIconLabel: View {
                 .foregroundColor(.black)
             }
         }
+        .frame(width: UIScreen.screenWidth, alignment: .leading)
     }
 }
 
 #Preview {
-    GameEndIconLabel(title: "Trending", font: .title, endIcon: "arrow.right")
+    GameEndIconLabel(title: "Trending", font: .title, endIcon: "arrow.right", alignment: .leading, width: UIScreen.screenWidth)
 }
