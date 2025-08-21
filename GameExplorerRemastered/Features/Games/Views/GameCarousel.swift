@@ -15,12 +15,14 @@ struct GameCarousel: View {
     
     var body: some View {
         VStack {
-            HStack(spacing: 16) {
-                GameText(text: header, font: .title, alignment: .leading, width: UIScreen.screenWidth / 1.1)
-                    .font(.title)
-                    .foregroundColor(.black)
-                    .fontWeight(.heavy)
-            }
+            GameSpace(height: 24)
+            GameEndIconLabel(title: "Trending", font: .title, endIcon: "arrow.right", alignment: .leading, width: UIScreen.screenWidth)
+//            HStack(spacing: 16) {
+//                GameText(text: header, font: .title, alignment: .leading, width: UIScreen.screenWidth / 1.1)
+//                    .font(.title)
+//                    .foregroundColor(.black)
+//                    .fontWeight(.heavy)
+//            }
             ScrollView(.horizontal,  showsIndicators: false) {
                 HStack(spacing: 24) {
                     ForEach(gameList) { gameItem in
@@ -28,6 +30,7 @@ struct GameCarousel: View {
                             //UPDATE: game detail view
                         } label: {
                             GameItem(gameItem: gameItem)
+                            
                         }
                     }
                 }
