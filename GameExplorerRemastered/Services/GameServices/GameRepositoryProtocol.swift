@@ -8,8 +8,8 @@
 import Foundation
 
 protocol GameRepositoryProtocol {
-    func fetchGames(with urlString: String, query: String) async throws -> [Game]?
-    func getSearchedGame(with searchString: String ) async throws -> [Game]?
+    func getGames() async throws -> [Game]?
+//    func getSearchedGame(with searchString: String ) async throws -> [Game]?
 
     
 }
