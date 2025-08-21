@@ -8,5 +8,5 @@
 import Foundation
 
 protocol NetworkServiceProtocol {
-    func fetchData(with url: String, query: String) async throws -> Data?
+    func fetchData(with url: String) async throws -> Data?
 }
