@@ -16,6 +16,7 @@ struct DisplayCardView: View {
             VStack(alignment: .center) {
                 HStack {
                     DisplayImageView(urlImage: displayImage)
+                        .frame(width: UIScreen.screenWidth / 1.5, height: UIScreen.screenHeight / 5.5)
                 }
                 GameSpace(height: 24)
                 HStack {
