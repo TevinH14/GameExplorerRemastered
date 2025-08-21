@@ -18,6 +18,8 @@ struct DisplayImageView: View {
                         .resizable()
                         .scaledToFill()
                         .frame(width: UIScreen.screenWidth / 1.5, height: UIScreen.screenHeight / 5.5)
+                        .clipped()
+
                 } placeholder: {
                     Rectangle().fill(.blue)
                         .frame(width:  UIScreen.screenWidth / 1.5, height:  UIScreen.screenHeight / 5.5)
@@ -38,5 +40,5 @@ func getUrl(urlString: String) -> URL? {
 }
 
 #Preview {
-    DisplayImageView(urlImage: "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg")
+    DisplayImageView(urlImage: "https://media.rawg.io/media/games/7fa/7fa0b586293c5861ee32490e953a4996.jpg")
 }
