@@ -7,11 +7,9 @@
 
 import Foundation
 
-import Foundation
-
 // MARK: - GameReponse
 struct GameResponse: Decodable {
-    let count: Int
+    let count: Int?
     let next: String?
     let previous: String?
     let results: [Game]
@@ -32,46 +30,46 @@ struct Game: Identifiable, Decodable {
     let ratings_count: Int?
     let reviews_text_count: Int?
     let added: Int?
-    let added_by_status: addedByStatus?
+    let added_by_status: AddedByStatus?
     let metacritic: Int?
     let playtime: Int?
-    let suggestions_count: Int
+    let suggestions_count: Int?
     let updated: String?
     let user_game: String?
     let reviews_count: Int?
     let saturated_color: String?
     let dominant_color: String?
     let parent_platforms: [Platform]?
-    let esrbRating: ESRBRating?
     let genres: [Genre]?
     let stores: [GameStore]?
     let clip: String? // or make a separate struct if clip is not null
     let tags: [Tag]?
-    let esrb_rating: ESRBRating
+    let esrb_rating: ESRBRating?
     let shortScreenshots: [Screenshot]?
+    
 }
 
 // MARK: - Rating Object
 struct Rating: Decodable {
-    let id: Int
-    let title: String
-    let count: Int
-    let percent: Double
+    let id: Int?
+    let title: String?
+    let count: Int?
+    let percent: Double?
 }
 
 
 // MARK: - ESRBRating Object
 struct ESRBRating: Decodable {
-    let id: Int
-    let slug: String
-    let name: String
+    let id: Int?
+    let name: String?
+    let slug: String?
 }
 
 // MARK: - Platform Object
 struct Platform: Decodable {
-    let id: Int
-    let name: String
-    let slug: String
+    let id: Int?
+    let name: String?
+    let slug: String?
 }
 
 // MARK: - Requirements Object
@@ -80,50 +78,54 @@ struct Requirements: Decodable {
     let recommended: String?
 }
 
+// MARK: - Genre Object
 struct Genre: Decodable {
-    let id: Int
-    let name: String
-    let slug: String
-    let games_count: Int
-    let image_background: String
+    let id: Int?
+    let name: String?
+    let slug: String?
+    let games_count: Int?
+    let image_background: String?
 }
 
+// MARK: - GameStore Object
 struct GameStore: Decodable {
-    let id: Int
-    let store: StoreDetail
+    let id: Int?
+    let store: StoreDetail?
 }
 
+// MARK: - StoreDetail Object
 struct StoreDetail: Decodable {
-    let id: Int
-    let name: String
-    let slug: String
-    let domain: String
-    let games_count: Int
-    let image_background: String
-
+    let id: Int?
+    let name: String?
+    let slug: String?
+    let domain: String?
+    let games_count: Int?
+    let image_background: String?
+    
 }
 
+// MARK: - Tag Object
 struct Tag: Decodable {
-    let id: Int
-    let name: String
-    let slug: String
-    let language: String
-    let games_count: Int
-    let image_background: String
+    let id: Int?
+    let name: String?
+    let slug: String?
+    let language: String?
+    let games_count: Int?
+    let image_background: String?
 }
 
+// MARK: - Screenshot Object
 struct Screenshot: Decodable {
-    let id: Int
-    let image: String
+    let id: Int?
+    let image: String?
 }
 
-struct addedByStatus: Decodable {
-    let yet: Int
-    let owned: Int
-    let beaten: Int
-    let toplay: Int
-    let dropped: Int
-    let playing: Int
+// MARK: - AddedByStatus Object
+struct AddedByStatus: Decodable {
+    let yet: Int?
+    let owned: Int?
+    let beaten: Int?
+    let toplay: Int?
+    let dropped: Int?
+    let playing: Int?
 }
-
-
