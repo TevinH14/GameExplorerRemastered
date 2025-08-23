@@ -26,13 +26,14 @@ struct PresentationCameraView: View {
         NavigationView {
             HStack {
                 if isPhotoTaken {
-//                    previewImage
+                    previewImage
                 } else {
                     ImagePicker(selectedImage: $selectedImage,
                                 isPhotoTaken: $isPhotoTaken,
                                 imageSource: imageSource)
                 }
-            }.ignoresSafeArea()
+            }
+            .ignoresSafeArea()
         }
     }
     

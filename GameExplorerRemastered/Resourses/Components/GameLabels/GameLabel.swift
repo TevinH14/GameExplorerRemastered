@@ -24,3 +24,7 @@ struct GameLabel: View {
         }
     }
 }
+
+#Preview {
+    GameLabel(labelName: "Main", iconName: "house")
+}

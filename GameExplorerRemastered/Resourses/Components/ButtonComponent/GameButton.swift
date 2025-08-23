@@ -36,3 +36,19 @@ struct GameButton: View {
         
     })
 }
+struct GameButtonPrimaryPreview: PreviewProvider {
+    static var previews: some View {
+        GameButton(typeButton: .gamePrimaryButton("See all"),
+                   action: {
+            
+        })
+    }
+}
+struct GameButtonSecondaryPreview: PreviewProvider {
+    static var previews: some View {
+        GameButton(typeButton: .gameSecondaryButton("See all"),
+                   action: {
+            
+        })
+    }
+}

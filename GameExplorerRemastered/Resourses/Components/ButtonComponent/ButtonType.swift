@@ -12,6 +12,7 @@ enum ButtonType {
     case gamePrimaryButton(String)
     case gameSecondaryButton(String)
     case gameItemButton(String)
+    case GameEndIconButton(String)
     
     var font: GameText {
         switch self {
@@ -21,6 +22,8 @@ enum ButtonType {
             GameText(text: title, font: .secondaryButton)
         case .gameItemButton(let title):
             GameText(text: title, font: .description)
+        case .GameEndIconButton(let title):
+            GameText(text: title, font: .description)
         }
     }
     
@@ -28,7 +31,7 @@ enum ButtonType {
         switch self {
         case .gamePrimaryButton( _):
             Color.blue
-        case .gameSecondaryButton( _):
+        case .gameSecondaryButton( _), .GameEndIconButton( _):
             Color.white
         case .gameItemButton( _):
             Color.clear
@@ -39,7 +42,7 @@ enum ButtonType {
         switch self {
         case .gamePrimaryButton( _):
             Color.white
-        case .gameSecondaryButton( _):
+        case .gameSecondaryButton( _), .GameEndIconButton( _):
             Color.blue
         case .gameItemButton( _):
             Color.black
