@@ -38,6 +38,8 @@
 		8F6BF73C2E58F2E600BCE819 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F6BF73B2E58F2E600BCE819 /* GoogleService-Info.plist */; };
 		8F6BF7422E5BB66400BCE819 /* GameDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BF7412E5BB66400BCE819 /* GameDate.swift */; };
 		8F6BF7442E5BEA3400BCE819 /* AuthMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BF7432E5BEA3400BCE819 /* AuthMain.swift */; };
+		8F6BF7482E5BF0EB00BCE819 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BF7472E5BF0EB00BCE819 /* AuthViewModel.swift */; };
+		8F6BF74A2E5BF10E00BCE819 /* AuthViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BF7492E5BF10E00BCE819 /* AuthViewModelProtocol.swift */; };
 		8F759EB82E42B32500866D77 /* Game+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F759EB72E42B32500866D77 /* Game+Extension.swift */; };
 		8F759EBD2E42F68C00866D77 /* GameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F759EBC2E42F68C00866D77 /* GameLabel.swift */; };
 		8FF9EC7C2E331BC8005A118D /* GameExplorerRemasteredApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9EC7B2E331BC8005A118D /* GameExplorerRemasteredApp.swift */; };
@@ -103,6 +105,8 @@
 		8F6BF73B2E58F2E600BCE819 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8F6BF7412E5BB66400BCE819 /* GameDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameDate.swift; path = GameExplorerRemastered/resourses/Util/GameDate.swift; sourceTree = SOURCE_ROOT; };
 		8F6BF7432E5BEA3400BCE819 /* AuthMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthMain.swift; path = GameExplorerRemastered/features/Auth/AuthMain.swift; sourceTree = SOURCE_ROOT; };
+		8F6BF7472E5BF0EB00BCE819 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthViewModel.swift; path = GameExplorerRemastered/features/Auth/ViewModel/AuthViewModel.swift; sourceTree = SOURCE_ROOT; };
+		8F6BF7492E5BF10E00BCE819 /* AuthViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthViewModelProtocol.swift; path = GameExplorerRemastered/features/Auth/ViewModel/AuthViewModelProtocol.swift; sourceTree = SOURCE_ROOT; };
 		8F759EB72E42B32500866D77 /* Game+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+Extension.swift"; sourceTree = "<group>"; };
 		8F759EBC2E42F68C00866D77 /* GameLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLabel.swift; sourceTree = "<group>"; };
 		8FF9EC782E331BC8005A118D /* GameExplorerRemastered.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameExplorerRemastered.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,7 +268,8 @@
 		8F6BF72B2E58EE5300BCE819 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				8F6BF7432E5BEA3400BCE819 /* AuthMain.swift */,
+				8F6BF7462E5BF0D300BCE819 /* ViewModel */,
+				8F6BF7452E5BF0C600BCE819 /* Views */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -283,6 +288,23 @@
 				8F6BF7412E5BB66400BCE819 /* GameDate.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		8F6BF7452E5BF0C600BCE819 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F6BF7432E5BEA3400BCE819 /* AuthMain.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8F6BF7462E5BF0D300BCE819 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8F6BF7492E5BF10E00BCE819 /* AuthViewModelProtocol.swift */,
+				8F6BF7472E5BF0EB00BCE819 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		8F759EB62E42B2F600866D77 /* GameModels */ = {
@@ -636,6 +658,7 @@
 				8FF9ECD72E396E20005A118D /* GameText.swift in Sources */,
 				8FF9ECE32E39733B005A118D /* GameRepositoryProtocol.swift in Sources */,
 				8F4794A02E4D37F4002A00AD /* GameSpace.swift in Sources */,
+				8F6BF7482E5BF0EB00BCE819 /* AuthViewModel.swift in Sources */,
 				8FF9EC7E2E331BC8005A118D /* ContentView.swift in Sources */,
 				8F759EBD2E42F68C00866D77 /* GameLabel.swift in Sources */,
 				8FF9ECE52E39736F005A118D /* GameRepository.swift in Sources */,
@@ -662,6 +685,7 @@
 				8F4794A42E4D618C002A00AD /* MenuItems.swift in Sources */,
 				8FF9ECB02E37DC1C005A118D /* Game.swift in Sources */,
 				8F6BF7442E5BEA3400BCE819 /* AuthMain.swift in Sources */,
+				8F6BF74A2E5BF10E00BCE819 /* AuthViewModelProtocol.swift in Sources */,
 				8F759EB82E42B32500866D77 /* Game+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
