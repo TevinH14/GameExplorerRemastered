@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import SwiftUI
 
+@MainActor
 final class HomeViewModel: HomeViewModelProtocol {
     var repository: any GameRepositoryProtocol
     @Published var gameList: [Game]
@@ -18,7 +19,7 @@ final class HomeViewModel: HomeViewModelProtocol {
         self.gameList = []
     }
     
-    func fetchGames() {
+    func fetchGames() async {
         Task {
             do {
                 if let games = try await self.repository.getGames() {
