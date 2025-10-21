@@ -16,7 +16,6 @@ struct GameResponse: Decodable {
 }
 
 // MARK: - Game Object
-
 struct Game: Identifiable, Decodable {
     let id: Int?
     let slug: String?
