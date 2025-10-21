@@ -67,5 +67,14 @@ extension Game {
                      ]
         )
     }
-    
+}
+
+extension GameResponse {
+    static var preview: GameResponse {
+        return GameResponse(
+            count: 4,
+            next: nil,
+            previous: nil,
+            results: [.preview, .preview, .preview, .preview])
+    }
 }
