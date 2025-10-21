@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         ZStack(alignment: .leading) {
             // Main content changes based on selection
-            NavigationView {
+            NavigationStack {
                 VStack {
                     switch selectedMenu {
                     case .home:
@@ -61,6 +61,8 @@ struct ContentView: View {
                         .padding()
                 })
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity) // ✅ ensures it fills screen
+
             .disabled(isMenuOpen)
 
             // Side Menu
@@ -82,6 +84,7 @@ struct ContentView: View {
             }
         }
     }
+    
 }
 
 
