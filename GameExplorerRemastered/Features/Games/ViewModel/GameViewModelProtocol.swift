@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GameViewModelProtocol: ObservableObject {
-    var gameList: [Game]? { get }
+    var gameList: GameResponse? { get set }
     
     func fetchGames()
     
