@@ -8,7 +8,10 @@
 import Foundation
 
 final class GameViewModel: GameViewModelProtocol {
-    var gameList: [Game]?
+    
+    var next: String? 
+    var previous: String?
+    var gameList: GameResponse?
     
     func fetchGames() {
         
