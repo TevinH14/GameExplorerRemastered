@@ -8,10 +8,18 @@
 import Foundation
 
 struct MockGameRepository: GameRepositoryProtocol {
+    func getTrendingGames() async throws -> [Game]? {
+        return [
+            .preview,
+            .preview
+        ]
+    }
+    
     func getGames() async throws -> [Game]? {
         return [
             .preview,
             .preview
         ]
     }
+    
 }
