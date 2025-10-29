@@ -25,17 +25,17 @@ struct GameDate {
     }
     
     //MARK: - getTheLast30Days get the last days from todays date
-    func getTheLast30Days(_ date: Date) ->  String? {
+    func getTheLast30Days(_ date: Date) ->  (startDate: String, endDate: String)? {
         if let thirtyDaysAgo = Calendar.current.date(byAdding: .day, value: -30, to: date) {
-            return formatDateYearMonthDay(thirtyDaysAgo)
+            return (formatDateYearMonthDay(thirtyDaysAgo), formatDateYearMonthDay(date))
         }
         return nil
     }
     
     //MARK: - getTheNext30Days get the next days from todays date
-    func getTheNext30Days(_ date: Date) ->  String? {
+    func getTheNext30Days(_ date: Date) ->  (startDate: String, endDate: String)? {
         if let thirtyDaysAgo = Calendar.current.date(byAdding: .day, value: +30, to: date) {
-            return formatDateYearMonthDay(thirtyDaysAgo)
+            return (formatDateYearMonthDay(date), formatDateYearMonthDay(thirtyDaysAgo))
         }
         return nil
     }
@@ -53,6 +53,16 @@ struct GameDate {
         let endOfYear = calendar.date(from: DateComponents(year: currentYear, month: 12, day: 31))!
         
         return (currentYear, formatDateYearMonthDay( startOfYear), formatDateYearMonthDay(endOfYear))
+    }
+    
+    func getLastYearDates() -> (startDate: String, endDate: String)? {
+        let calendar = Calendar.current
+        let currentDate = Date()
+        let year = calendar.component(.year, from: currentDate) - 1
+        let start = "\(year)-01-01"
+        let end = "\(year)-12-31"
+        
+        return (start, end)
     }
     
 }
