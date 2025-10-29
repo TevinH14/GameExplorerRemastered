@@ -9,39 +9,54 @@ import Foundation
 import SwiftUI
 
 struct GameCarousel: View {
-    
+    @State var goToGameListView: Bool = false
     let header: String
-    let gameList: [Game]
+    let gameResponse: GameResponse
     
     var body: some View {
-        VStack {
-            GameSpace(height: 24)
-            GameEndIconLabel(title: "Trending", font: .title, endIcon: "arrow.right", alignment: .leading, width: UIScreen.screenWidth)
-//            HStack(spacing: 16) {
-//                GameText(text: header, font: .title, alignment: .leading, width: UIScreen.screenWidth / 1.1)
-//                    .font(.title)
-//                    .foregroundColor(.black)
-//                    .fontWeight(.heavy)
-//            }
-            ScrollView(.horizontal,  showsIndicators: false) {
-                HStack(spacing: 24) {
-                    ForEach(gameList) { gameItem in
-                        NavigationLink {
-                            //UPDATE: game detail view
-                        } label: {
-                            GameItem(gameItem: gameItem)
-                            
+        NavigationStack{
+            VStack {
+                GameSpace(height: 24)
+                GameEndIconLabel(
+                    title: header,
+                    font: .title,
+                    endIcon: "chevron.right",
+                    alignment: .leading,
+                    width: UIScreen.screenWidth
+                )
+                .onTapGesture {
+                    goToGameListView.toggle()
+                }
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 24) {
+                        ForEach(gameResponse.results.prefix(8)) { gameItem in
+                            NavigationLink {
+                                //UPDATE: game detail view
+                            } label: {
+                                GameItem(gameItem: gameItem)
+                                
+                            }
                         }
                     }
                 }
+                .navigationDestination(isPresented: $goToGameListView) {
+                    GamesCollectionView(gameResponse: gameResponse, title: header)
+                }
+                .padding([.leading, .trailing], 8)
+                
             }
+            .layoutPriority(1)
+
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity) 
+        
+        
     }
 }
 
-
 struct GameCarouselPreview: PreviewProvider {
-    static var previews: some View{
-        GameCarousel(header: "Trending", gameList: [.preview, .preview])
+    static var previews: some View {
+        GameCarousel(header: "Trending", gameResponse: .preview)
     }
 }
