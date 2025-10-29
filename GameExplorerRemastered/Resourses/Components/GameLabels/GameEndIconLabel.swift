@@ -25,7 +25,6 @@ struct GameEndIconLabel: View {
                         .font(.title)
                 }
                 .padding()
-                .foregroundColor(.black)
             }
         }
         .frame(width: UIScreen.screenWidth, alignment: .leading)
