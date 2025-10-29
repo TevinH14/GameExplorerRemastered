@@ -10,39 +10,45 @@ import SwiftUI
 
 struct HomeView<homeViewModel: HomeViewModelProtocol>: View {
     @ObservedObject var viewModel: homeViewModel
+    
     var body: some View {
-        ZStack {
-            if (viewModel.gameList.isEmpty) {
-                
-            }
-            else {
-                VStack {
-                    if (viewModel.gameList.isEmpty) {
-                        ProgressView()
-                    } else {
-                        GameCarousel(header: "games", gameList: viewModel.gameList)
+        NavigationStack {
+            
+            VStack {
+                if !viewModel.isLoaded {
+                    ProgressView()
+                } else {
+                    ScrollView {
                         
+                        GameCarousel(
+                            header: "Upcoming",
+                            gameResponse: viewModel.upcomingResponse!
+                        )
+                        GameCarousel(
+                            header: "Recently Released",
+                            gameResponse: viewModel.recentReleasedResponse!
+                        )
+                        GameCarousel(
+                            header: "Trending",
+                            gameResponse: viewModel.trendingResponse!
+                        )
                     }
                 }
             }
+            
         }
-        .onAppear() {
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
+        .onAppear {
             viewModel.fetchGames()
         }
     }
 }
 
-
-//MARK: Home View Preview
+//MARK: - Home View Preview
 struct HomeView_Previews: PreviewProvider {
-    class MockHomeViewModel: HomeViewModelProtocol {
-        @Published var repository: any GameRepositoryProtocol = MockGameRepository()
-        @Published var gameList: [Game] = [.preview, .preview]
-        
-        func fetchGames() {}
-    }
     
     static var previews: some View {
-        HomeView(viewModel: MockHomeViewModel())
+        HomeView(viewModel: MockHomeViewModel(repository: GameRepository()))
     }
 }
