@@ -1,5 +1,3 @@
-Got you 👍 I’ll write a clean, professional README.md tailored for an iOS Game Explorer app, using SwiftUI and the RAWG API, based on what you’ve been building. You can copy-paste this directly into your repo and tweak names if needed.
-
 🎮 Game Explorer (iOS)
 
 Game Explorer is an iOS application built with SwiftUI that allows users to discover, browse, and explore video games using the RAWG Video Games Database API. The app provides rich game details including ratings, genres, platforms, screenshots, and more — all wrapped in a modern, responsive iOS UI.
