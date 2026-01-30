@@ -1,8 +1,9 @@
-🎮 Game Explorer (iOS)
+# 🎮 Game Explorer Remastered (iOS)
 
 Game Explorer is an iOS application built with SwiftUI that allows users to discover, browse, and explore video games using the RAWG Video Games Database API. The app provides rich game details including ratings, genres, platforms, screenshots, and more — all wrapped in a modern, responsive iOS UI.
 
-✨ Features
+---
+## ✨ Features
 
 🔍 Browse and search for video games
 
@@ -26,25 +27,24 @@ Genres & tags
 
 🔐 Secure API key handling (no hardcoded secrets)
 
-🛠 Tech Stack
+---
 
-Language: Swift
+## 🛠 Tech Stack
 
-UI Framework: SwiftUI
+* Language: Swift
+* UI Framework: SwiftUI
+* Architecture: MVVM
+* Networking: URLSession
+* API: RAWG Video Games Database
+* Data Models: Codable
+* Dependency Management: Swift Package Manager
+*iOS Version: iOS 17+
 
-Architecture: MVVM
+---
 
-Networking: URLSession
+## 📂 Project Structure
 
-API: RAWG Video Games Database
-
-Data Models: Codable
-
-Dependency Management: Swift Package Manager
-
-iOS Version: iOS 17+
-
-📂 Project Structure
+```text
 GameExplorer/
 ├── App/
 │   └── GameExplorerApp.swift
@@ -79,12 +79,19 @@ GameExplorer/
 │   └── MockData.swift
 │
 └── README.md
+```
 
-🔑 API Setup (RAWG)
+---
 
-Create an account at RAWG.io
+## 🔑 API Configuration
 
-Generate an API key
+This app uses the **RAWG API**.
+
+### 1. Get an API Key
+
+Sign up at: [https://rawg.io/apidocs](https://rawg.io/apidocs)
+
+### 2. Add API Key
 
 Add your key securely (example using a .plist or environment configuration)
 
@@ -96,7 +103,9 @@ struct APIConstants {
 
 ⚠️ Do not commit your real API key to source control
 
-🚀 Getting Started
+---
+
+## 🚀 Getting Started
 Prerequisites
 
 Xcode 15+
@@ -133,6 +142,8 @@ You can toggle between live and mock data in the ViewModel layer.
 
 (Add screenshots or GIFs here once available)
 
+---
+
 🧠 Architecture Notes
 
 MVVM is used to separate UI, business logic, and data
@@ -147,26 +158,58 @@ Error handling
 
 Views remain lightweight and declarative
 
-🔮 Future Improvements
+* 🔮 Future Improvements
+* 🔐 User authentication
+* ❤️ Favorites & saved games
+* 🌙 Dark mode enhancements
+* 📶 Offline caching
+* 🔎 Advanced filtering & sorting
+* 🧪 Unit & UI tests
 
-🔐 User authentication
-
-❤️ Favorites & saved games
-
-🌙 Dark mode enhancements
-
-📶 Offline caching
-
-🔎 Advanced filtering & sorting
-
-🧪 Unit & UI tests
+___
 
 📜 License
 
 This project is licensed under the MIT License — feel free to use, modify, and distribute.
 
-🙌 Acknowledgements
+---
+
+## What This Project Demonstrates
+
+* Modern Android development with SwiftUI
+* Clean separation of concerns
+* Scalable architecture
+* modularity components
+* Real-world API integration
+* Production-ready project structure
+
+---
+
+## License
+
+This project is for educational and portfolio purposes.
+
+---
+### 🙌 Acknowledgements
 
 RAWG Video Games Database
 
 Apple SwiftUI Documentation
+
+---
+
+## Author
+
+**Tevin Hamilton**
+Android & iOS Mobile Engineer
+
+###Links
+
+[GitHub TevinH14 ](http://daringfireball.net/projects/markdown/syntax)
+
+[Linkedin Porfilo ](https://www.linkedin.com/in/tevin-hamilton-253558141/)
+
+[ Porfilo (Update main link) ]()
+
+---
+
